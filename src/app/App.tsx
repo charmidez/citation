@@ -1,7 +1,16 @@
 
+
+import { Route, Routes } from "react-router";
+import HomeClients from "./pages/HomeClients";
+import DashBoard from "./pages/DashBoard";
+
 function App() {
   return (
     <>
+    <Routes>
+      <Route path="/" element={<HomeClients />} />
+      <Route path="/dashboard" element={<DashBoard />} />
+    </Routes>
     
     </>
   );
