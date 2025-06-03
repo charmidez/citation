@@ -1,19 +1,16 @@
 
 function App() {
-
-
   return (
     <>
-    <h1 className="btn btn-outline">Citation </h1>
+    
     </>
-  )
+  );
 }
 
-export default App
+export default App;
 
-
-
-{/*
+{
+  /*
 
 
   import { useState } from 'react'
@@ -44,4 +41,5 @@ import viteLogo from '/vite.svg'
         Click on the Vite and React logos to learn more
       </p>
   
-  */}
+  */
+}
