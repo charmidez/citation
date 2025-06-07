@@ -9,7 +9,6 @@ export default function OpenDrawerMine({ componentInSideBar, className, id }: Op
     <div className={`drawer ${className}`} id={id}>
       <input id="drawer-mine" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        {/* Page content here */}
         <label htmlFor="drawer-mine" className="btn btn-primary drawer-button">
           Connexion
         </label>

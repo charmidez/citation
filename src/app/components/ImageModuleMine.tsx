@@ -10,7 +10,7 @@ interface ImageModuleProps {
 export default function ImageModuleMine({ src, alt, className, onClick }: ImageModuleProps) {
   return (
     <div className="">
-      <img src={src} alt={alt} className={`${className} rounded-box w-20 h-20 object-cover`} onClick={onClick}/>
+      <img src={src} alt={alt} className={`${className} rounded-2xl w-20 h-20 object-cover`} onClick={onClick}/>
     </div>
   );
 }

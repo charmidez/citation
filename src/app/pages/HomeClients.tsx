@@ -2,6 +2,7 @@ import { useState } from "react";
 import ImageCarouselMine from "../components/ImageCarousselMine";
 import MainCarteMine from "../components/MainCarteMine";
 import NavBarMine from "../components/NavBarMine";
+import ModifierBarMine from "../components/ModifierBarMine";
 
 const images = [
   "/assets/images/img1.webp",
@@ -14,16 +15,12 @@ const images = [
   "/assets/images/img8.webp",
   "/assets/images/img9.webp",
   "/assets/images/img10.webp",
-  "/assets/images/img11.webp",
-  "/assets/images/img12.webp",
-  "/assets/images/img13.webp",
-  "/assets/images/img14.webp",
-  "/assets/images/img15.webp",
-  "/assets/images/img16.webp",
 ];
 
 export default function HomeClients() {
   const [selectedImage, setSelectedImage] = useState(images[0]);
+
+
 
   return (
     <div className="flex flex-col lg:gap-8 md:gap-4 g-2 lg:px-128 md:px-8 px-4 lg:py-8 md:py-4 py-2">
@@ -33,7 +30,6 @@ export default function HomeClients() {
           images={images}
           selectedImage={selectedImage}
           setSelectedImage={setSelectedImage}
-          className={`  `}
         />
         <MainCarteMine
           imageUrl={selectedImage}
@@ -45,6 +41,7 @@ export default function HomeClients() {
           }
           author={"Sir Edmund Hillary"}
         />
+        <ModifierBarMine />
       </div>
     </div>
   );
