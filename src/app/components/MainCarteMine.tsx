@@ -13,7 +13,7 @@ export default function MainCarteMine({
 }: MainCarteMineProps) {
   return (
     <div
-      className={`flex flex-col items-center bg-base-100 rounded-box shadow-md p-4 bg-cover bg-center bg-no-repeat aspect-square w-full`}
+      className={`flex flex-col items-center bg-base-100 rounded-2xl shadow-md p-4 bg-cover bg-center bg-no-repeat aspect-square w-full`}
       style={{ backgroundImage: `url(${imageUrl})` }}
     >
       <div className="flex flex-col items-center justify-center text-center w-full h-full lg:p-32 md:p-16 p-8" >
