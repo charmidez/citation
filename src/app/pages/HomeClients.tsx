@@ -5,16 +5,16 @@ import NavBarMine from "../components/NavBarMine";
 import ModifierBarMine from "../components/ModifierBarMine";
 
 const images = [
-  "/assets/images/img1.webp",
-  "/assets/images/img2.webp",
-  "/assets/images/img3.webp",
-  "/assets/images/img4.webp",
-  "/assets/images/img5.webp",
-  "/assets/images/img6.webp",
-  "/assets/images/img7.webp",
-  "/assets/images/img8.webp",
-  "/assets/images/img9.webp",
-  "/assets/images/img10.webp",
+  { src: "/assets/images/img1.webp", color: "white" },
+  { src: "/assets/images/img2.webp", color: "black" },
+  { src: "/assets/images/img3.webp", color: "white" },
+  { src: "/assets/images/img4.webp", color: "black" },
+  { src: "/assets/images/img5.webp", color: "white" },
+  { src: "/assets/images/img6.webp", color: "black" },
+  { src: "/assets/images/img7.webp", color: "white" },
+  { src: "/assets/images/img8.webp", color: "black" },
+  { src: "/assets/images/img9.webp", color: "white" },
+  { src: "/assets/images/img10.webp", color: "black" },
 ];
 
 export default function HomeClients() {
@@ -28,14 +28,15 @@ export default function HomeClients() {
       <div className="flex flex-col lg:gap-8 md:gap-4 gap-2  bg-base-200 rounded-box p-4">
         <ImageCarouselMine
           images={images}
-          selectedImage={selectedImage}
+          selectedImage={selectedImage.src}
           setSelectedImage={setSelectedImage}
         />
         <MainCarteMine
-          imageUrl={selectedImage}
+          imageUrl={selectedImage.src}
           citation={
             "Ce n’est pas la montagne que nous conquérons, mais nous-mêmes. "
           }
+          colorText={selectedImage.color}
           description={
             "C’est un rappel que le vrai défi, c’est souvent de dépasser nos propres limites. "
           }

@@ -1,9 +1,14 @@
 import { useEffect, useState, type SetStateAction } from "react";
 import ImageModuleMine from "./ImageModuleMine";
 
+type ImageWithColor = {
+  src: string;
+  color: string;
+};
+
 interface ImageCarouselProps {
-  images: string[];
-  setSelectedImage: React.Dispatch<React.SetStateAction<string>>;
+  images: ImageWithColor[];
+  setSelectedImage: React.Dispatch<React.SetStateAction<ImageWithColor>>;
   selectedImage: string;
   className?: string;
 }
@@ -14,8 +19,8 @@ export default function ImageCarouselMine({
   selectedImage,
   className,
 }: ImageCarouselProps) {
-  const handleClick = (src: SetStateAction<string>) => {
-    setSelectedImage(src);
+  const handleClick = (imgWithColor: SetStateAction<ImageWithColor>) => {
+    setSelectedImage(imgWithColor);
   };
 
   const [visibleCount, setVisibleCount] = useState(10);
@@ -86,18 +91,18 @@ export default function ImageCarouselMine({
     <div className="flex items-center ">
       <div className="overflow-hidden w-full">
         <div className="flex transition-transform duration-500 ease-in-out justify-between">
-          {images.slice(0, visibleCount).map((src, index) => (
+          {images.slice(0, visibleCount).map((imgWithColor, index) => (
             <div
               className="px-0.5 justify-around items-center"
               key={index}
-              onClick={() => handleClick(src)}
+              onClick={() => handleClick(imgWithColor)}
             >
               <ImageModuleMine
-                src={src}
+                src={imgWithColor.src}
                 alt={`img-${index}`}
                 //style={{  }}
                 className={`${className}  ${
-                  selectedImage === images[index]
+                  selectedImage === imgWithColor.src
                     ? "border-3 border-base-content "
                     : "border-1 border-base-300"
                 }   border-base-300 border-4  object-cover`}
